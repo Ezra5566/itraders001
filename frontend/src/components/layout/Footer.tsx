@@ -92,7 +92,7 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-metallic-400 text-sm mb-6 max-w-sm">
+            <p className="text-black text-sm mb-6 max-w-sm leading-relaxed">
               Your trusted destination for premium electronics in Kenya. 
               We offer authentic Apple, Samsung products with warranty and excellent customer service.
             </p>
@@ -114,13 +114,13 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Products</h3>
+            <h3 className="font-bold text-white text-lg mb-4">Products</h3>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-metallic-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -131,13 +131,13 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Support</h3>
+            <h3 className="font-bold text-white text-lg mb-4">Support</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-metallic-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -148,13 +148,13 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <h3 className="font-bold text-white text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-metallic-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -169,7 +169,7 @@ export default function Footer() {
       <div className="border-t border-dark-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-metallic-400 text-sm">
+            <p className="text-gray-300 text-sm font-medium">
               &copy; {currentYear} ITraders Store. All rights reserved.
             </p>
             <div className="flex items-center gap-4">

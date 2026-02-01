@@ -64,11 +64,11 @@ export default function HomePage() {
               <span className="inline-block px-4 py-1.5 bg-primary-600/20 text-primary-400 rounded-full text-sm font-medium mb-6">
                 New Arrivals
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                 Premium Electronics
                 <span className="block gradient-text">For Everyone</span>
               </h1>
-              <p className="text-lg text-metallic-300 mb-8 max-w-lg">
+              <p className="text-lg text-gray-200 mb-8 max-w-lg leading-relaxed">
                 Discover the latest Apple and Samsung products at unbeatable prices. 
                 Authentic devices with official warranty.
               </p>
@@ -123,8 +123,8 @@ export default function HomePage() {
                 <feature.icon className="w-6 h-6 text-primary-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-dark-900">{feature.title}</h3>
-                <p className="text-sm text-metallic-500">{feature.description}</p>
+                <h3 className="font-bold text-black">{feature.title}</h3>
+                <p className="text-sm text-gray-600 font-medium">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -155,7 +155,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-primary-600/20 transition-colors" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                   <h3 className="text-white font-bold text-xl mb-2">{category.name}</h3>
-                  <p className="text-metallic-400 text-sm">{category.description}</p>
+                  <p className="text-gray-300 text-sm font-medium">{category.description}</p>
                   <span className="mt-4 inline-flex items-center text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                     Explore <ArrowRight size={16} className="ml-1" />
                   </span>
@@ -197,8 +197,8 @@ export default function HomePage() {
         <div className="bg-gradient-to-r from-primary-900 via-primary-800 to-purple-900 rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Apple & Samsung Authorized</h2>
-              <p className="text-metallic-300 max-w-lg">
+              <h2 className="text-3xl font-bold mb-2 text-white">Apple & Samsung Authorized</h2>
+              <p className="text-gray-200 max-w-lg leading-relaxed">
                 We are an authorized reseller. All products come with official warranty 
                 and genuine accessories.
               </p>

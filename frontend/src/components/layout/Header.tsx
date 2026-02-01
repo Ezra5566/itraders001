@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useCart } from '@/hooks/useCart';
 import { Menu, X, ShoppingCart, User, Search, ChevronDown, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
+//import { useEffect, useState } from 'react';
 
 export default function Header() {
   const { user, isAuthenticated, logout } = useAuth();
@@ -32,6 +33,9 @@ export default function Header() {
     { name: 'Samsung', href: '/category/samsung-phones' },
     { name: 'Accessories', href: '/category/accessories' },
   ];
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
     <header
@@ -91,7 +95,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-dark-700 hover:text-primary-600 font-medium transition-colors"
+                className="text-black hover:text-primary-600 font-semibold transition-colors"
               >
                 {link.name}
               </Link>
@@ -119,7 +123,7 @@ export default function Header() {
                   <span className="hidden sm:block text-sm font-medium">{user?.firstName}</span>
                   <ChevronDown size={16} className="hidden sm:block" />
                 </button>
-                
+
                 {isUserMenuOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-metallic-100 py-1 animate-scale-in">
                     <Link
@@ -206,19 +210,19 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            {!isAuthenticated && (
+            {mounted && !isAuthenticated && (
               <>
                 <hr className="my-4 border-metallic-200" />
                 <Link
                   href="/login"
-                  className="block py-2 text-primary-600 font-medium"
+                  className="block py-2 text-primary-600 font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/register"
-                  className="block py-2 text-primary-600 font-medium"
+                  className="block py-2 text-primary-600 font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Create Account

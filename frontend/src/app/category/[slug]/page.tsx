@@ -51,8 +51,8 @@ export default function CategoryPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-dark-900 mb-2">Category Not Found</h1>
-          <p className="text-metallic-500 mb-4">The category you are looking for does not exist.</p>
+          <h1 className="text-2xl font-bold text-black mb-2">Category Not Found</h1>
+          <p className="text-gray-700 mb-4 font-medium">The category you are looking for does not exist.</p>
           <Link href="/">
             <Button>Go Home</Button>
           </Link>
@@ -74,8 +74,8 @@ export default function CategoryPage() {
           
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-dark-900">{category.name}</h1>
-              <p className="text-metallic-500 mt-1">{category.description}</p>
+              <h1 className="text-3xl font-bold text-black">{category.name}</h1>
+              <p className="text-gray-700 mt-1 font-medium">{category.description}</p>
             </div>
             
             {/* Controls */}
@@ -100,8 +100,8 @@ export default function CategoryPage() {
         {products.length === 0 ? (
           <div className="text-center py-16">
             <SlidersHorizontal className="w-16 h-16 text-metallic-300 mx-auto mb-4" />
-            <h2 className="text-xl font-semibold text-dark-900 mb-2">No Products Found</h2>
-            <p className="text-metallic-500">Products will be added to this category soon.</p>
+            <h2 className="text-xl font-bold text-black mb-2">No Products Found</h2>
+            <p className="text-gray-700 font-medium">Products will be added to this category soon.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

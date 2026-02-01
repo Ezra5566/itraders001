@@ -62,8 +62,8 @@ export default function ProductPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-dark-900 mb-2">Product Not Found</h1>
-          <p className="text-metallic-500 mb-4">The product you are looking for does not exist.</p>
+          <h1 className="text-2xl font-bold text-black mb-2">Product Not Found</h1>
+          <p className="text-gray-700 mb-4 font-medium">The product you are looking for does not exist.</p>
           <Link href="/">
             <Button>Continue Shopping</Button>
           </Link>
@@ -152,7 +152,7 @@ export default function ProductPage() {
                   <span className="text-red-500 text-sm">Out of Stock</span>
                 )}
               </div>
-              <h1 className="text-3xl font-bold text-dark-900">{product.name}</h1>
+              <h1 className="text-3xl font-bold text-black">{product.name}</h1>
               
               {/* Rating */}
               <div className="flex items-center gap-2 mt-3">
@@ -188,18 +188,18 @@ export default function ProductPage() {
               )}
             </div>
 
-            <p className="text-metallic-600 leading-relaxed">{product.description}</p>
+            <p className="text-black leading-relaxed font-medium">{product.description}</p>
 
             {/* Short Description */}
             {product.shortDescription && (
               <div className="p-4 bg-metallic-50 rounded-xl">
-                <p className="text-sm text-metallic-600">{product.shortDescription}</p>
+                <p className="text-sm text-gray-700 font-medium">{product.shortDescription}</p>
               </div>
             )}
 
             {/* Quantity */}
             <div className="flex items-center gap-4">
-              <span className="font-medium text-dark-900">Quantity:</span>
+              <span className="font-bold text-black">Quantity:</span>
               <div className="flex items-center border border-metallic-200 rounded-lg">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -263,7 +263,7 @@ export default function ProductPage() {
         {/* Specifications */}
         {product.specifications && product.specifications.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-dark-900 mb-6">Specifications</h2>
+            <h2 className="text-2xl font-bold text-black mb-6">Specifications</h2>
             <div className="bg-metallic-50 rounded-xl overflow-hidden">
               {product.specifications.map((spec, index) => (
                 <div
@@ -272,8 +272,8 @@ export default function ProductPage() {
                     index !== product.specifications!.length - 1 ? 'border-b border-metallic-200' : ''
                   }`}
                 >
-                  <span className="text-metallic-600">{spec.name}</span>
-                  <span className="font-medium text-dark-900">{spec.value}</span>
+                  <span className="text-gray-700 font-medium">{spec.name}</span>
+                  <span className="font-bold text-black">{spec.value}</span>
                 </div>
               ))}
             </div>

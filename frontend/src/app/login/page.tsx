@@ -44,8 +44,8 @@ export default function LoginPage() {
     <div className="min-h-screen bg-metallic-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-2xl shadow-xl">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-dark-900">Welcome Back</h1>
-          <p className="mt-2 text-metallic-500">
+          <h1 className="text-3xl font-bold text-black">Welcome Back</h1>
+          <p className="mt-2 text-gray-700 font-medium">
             Sign in to your ITraders Store account
           </p>
         </div>
@@ -105,9 +105,9 @@ export default function LoginPage() {
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-metallic-500">
+          <p className="text-gray-700 font-medium">
             Do not have an account?{' '}
-            <Link href="/register" className="text-primary-600 hover:text-primary-700 font-medium">
+            <Link href="/register" className="text-primary-600 hover:text-primary-700 font-bold">
               Create one
             </Link>
           </p>

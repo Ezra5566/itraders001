@@ -14,7 +14,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="block text-sm font-medium text-metallic-700 mb-1.5">
+          <label className="block text-sm font-bold text-black mb-1.5">
             {label}
           </label>
         )}
@@ -26,15 +26,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             'disabled:bg-metallic-50 disabled:cursor-not-allowed',
             error
               ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-              : 'border-metallic-200 focus:border-primary-500 focus:ring-primary-500/20 hover:border-metallic-300',
+              : 'border-gray-400 focus:border-primary-500 focus:ring-primary-500/20 hover:border-gray-500',
             className
           )}
           {...props}
         />
         {error ? (
-          <p className="mt-1.5 text-sm text-red-500">{error}</p>
+          <p className="mt-1.5 text-sm text-red-600 font-medium">{error}</p>
         ) : helperText ? (
-          <p className="mt-1.5 text-sm text-metallic-500">{helperText}</p>
+          <p className="mt-1.5 text-sm text-gray-600 font-medium">{helperText}</p>
         ) : null}
       </div>
     );

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 10, 10, 10;
+  --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
 }
 
@@ -18,8 +18,10 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #000000;
   background: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar */
@@ -76,7 +78,7 @@ body {
 .metallic-border {
   border: 1px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, #C0C0C0, #E8E8E8, #A0A0A0) border-box;
+              linear-gradient(135deg, #C0C0C0, #E8E8E8, #1a1a1a) border-box;
 }
 
 /* Animated underline */
@@ -121,8 +123,8 @@ body {
 
 /* Selection color */
 ::selection {
-  background: rgba(124, 58, 237, 0.2);
-  color: #7C3AED;
+  background: rgba(124, 58, 237, 0.3);
+  color: #000000;
 }
 
 /* Hide number input arrows */

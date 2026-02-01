@@ -44,8 +44,8 @@ export default function CartPage() {
       <div className="min-h-screen bg-metallic-50 flex items-center justify-center py-12">
         <div className="text-center">
           <ShoppingBag className="w-16 h-16 text-metallic-300 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-dark-900 mb-2">Please Sign In</h2>
-          <p className="text-metallic-500 mb-6">Sign in to view your cart and continue shopping</p>
+          <h2 className="text-2xl font-bold text-black mb-2">Please Sign In</h2>
+          <p className="text-gray-700 mb-6 font-medium">Sign in to view your cart and continue shopping</p>
           <Link href="/login">
             <Button>Sign In</Button>
           </Link>
@@ -67,8 +67,8 @@ export default function CartPage() {
       <div className="min-h-screen bg-metallic-50 flex items-center justify-center py-12">
         <div className="text-center">
           <ShoppingBag className="w-16 h-16 text-metallic-300 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-dark-900 mb-2">Your Cart is Empty</h2>
-          <p className="text-metallic-500 mb-6">Looks like you have not added any items yet</p>
+          <h2 className="text-2xl font-bold text-black mb-2">Your Cart is Empty</h2>
+          <p className="text-gray-700 mb-6 font-medium">Looks like you have not added any items yet</p>
           <Link href="/">
             <Button>Start Shopping</Button>
           </Link>
@@ -80,7 +80,7 @@ export default function CartPage() {
   return (
     <div className="min-h-screen bg-metallic-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-dark-900 mb-8">Shopping Cart ({itemCount} items)</h1>
+        <h1 className="text-3xl font-bold text-black mb-8">Shopping Cart ({itemCount} items)</h1>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Cart Items */}
@@ -147,7 +147,7 @@ export default function CartPage() {
 
                 {/* Item Total */}
                 <div className="text-right">
-                  <p className="font-bold text-dark-900">
+                  <p className="font-bold text-black">
                     {formatPrice(item.price * item.quantity)}
                   </p>
                 </div>
@@ -162,7 +162,7 @@ export default function CartPage() {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl p-6 shadow-sm sticky top-24">
-              <h2 className="text-xl font-bold text-dark-900 mb-4">Order Summary</h2>
+              <h2 className="text-xl font-bold text-black mb-4">Order Summary</h2>
 
               {/* Coupon */}
               <div className="mb-4">
@@ -221,7 +221,7 @@ export default function CartPage() {
                 </Button>
               </Link>
 
-              <p className="text-center text-sm text-metallic-500 mt-4">
+              <p className="text-center text-sm text-gray-700 mt-4 font-medium">
                 Free shipping on orders over {formatPrice(5000)}
               </p>
             </div>
