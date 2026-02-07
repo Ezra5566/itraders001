@@ -5,7 +5,7 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '5000',
+        port: '5001',
         pathname: '/uploads/**',
       },
       {
@@ -16,13 +16,13 @@ const nextConfig = {
     ],
   },
   env: {
-    API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api',
+    API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api',
   },
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/:path*`,
+        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api'}/:path*`,
       },
     ];
   },
